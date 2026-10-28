@@ -38,8 +38,7 @@ jobs:
           fi
 
           echo "$(dirname "$SDKMANAGER")" >> "$GITHUB_PATH"
-          yes | "$SDKMANAGER" --licenses
-          "$SDKMANAGER" --install \
+            yes | "$SDKMANAGER" --licenses || true          "$SDKMANAGER" --install \
             "platforms;android-36" \
             "build-tools;36.0.0" \
             "ndk;27.2.12479018"
