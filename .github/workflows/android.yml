@@ -1,3 +1,4 @@
+
 name: Build Pulsegram APK
 
 on:
@@ -12,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -24,15 +26,13 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
+      - name: Install Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install Android SDK and NDK
+      - name: Install SDK packages
         run: |
-          sdkmanager --install \
-            "platforms;android-36" \
-            "build-tools;36.0.0" \
-            "ndk;27.2.12479018"
+          yes | sdkmanager --licenses
+          sdkmanager "platforms;android-36" "build-tools;36.0.0" "ndk;27.2.12479018"
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
