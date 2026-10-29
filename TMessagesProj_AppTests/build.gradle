@@ -173,7 +173,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace 'org.telegram.messenger.test'
+    namespace 'com.pulsegram.android.test'
 
     lintOptions {
         checkReleaseBuilds false

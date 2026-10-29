@@ -156,7 +156,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace 'org.telegram.messenger.web'
+    namespace 'com.pulsegram.android.web'
 
     lintOptions {
         checkReleaseBuilds false

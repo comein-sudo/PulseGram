@@ -164,7 +164,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace 'org.telegram.messenger.huawei'
+    namespace 'com.pulsegram.android.huawei'
 
     lintOptions {
         checkReleaseBuilds false

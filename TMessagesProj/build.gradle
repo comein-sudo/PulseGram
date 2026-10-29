@@ -231,7 +231,7 @@ android {
         }
     }
 
-    namespace 'org.telegram.messenger'
+    namespace 'com.pulsegram.android'
 }
 
 
